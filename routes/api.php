@@ -23,5 +23,7 @@ Route::post('signUp', 'App\Http\Controllers\UsersController@signUp');
 Route::post('signIn', 'App\Http\Controllers\UsersController@signIn');
 Route::post('exit', 'App\Http\Controllers\UsersController@logOut');
 Route::post('create', 'App\Http\Controllers\UsersController@addUser');
+
+Route::patch('edit', 'App\Http\Controllers\UsersController@editProfile')->middleware('registered');
 Route::patch('edit', 'App\Http\Controllers\UsersController@editProfile');
 Route::post('delete', 'App\Http\Controllers\UsersController@deleteUser');
